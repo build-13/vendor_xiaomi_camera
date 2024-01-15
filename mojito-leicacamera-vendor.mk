@@ -7,6 +7,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/etc/default-permissions/miuicamera-permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/miuicamera-permissions.xml \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/etc/device_features/mojito.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/device_features/mojito.xml \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/etc/device_features/sunny.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/device_features/sunny.xml \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/etc/permissions/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/etc/permissions/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.camera.front.xml \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/etc/permissions/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.camera.full.xml \
@@ -99,8 +101,36 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash_dumper.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash_dumper.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libyuv.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libyuv.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libHDR.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libHDR.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libMiuiGalleryNSGIF.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libMiuiGalleryNSGIF.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libXmStreamingSDK.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libXmStreamingSDK.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libc++_shared.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libc++_shared.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libgallery_block_sdk.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libgallery_block_sdk.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libinpaint.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libinpaint.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libinpaint_jni.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libinpaint_jni.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libmiocr.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libmiocr.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libmiocr_wrapper.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libmiocr_wrapper.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libmiuiblursdk.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libmiuiblursdk.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libnexcralbody_mc_jb.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libnexcralbody_mc_jb.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libnexeditorsdk.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libnexeditorsdk.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libnexralbody_audio.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libnexralbody_audio.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libsqlcipher.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libsqlcipher.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libsqliteX.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libsqliteX.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libvis.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libvis.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libwrapnexflaccalbody.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libwrapnexflaccalbody.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libwrapnexpcmcalbody.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libwrapnexpcmcalbody.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libxcrash.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libxcrash.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiGallery/lib/arm64/libxcrash_dumper.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiGallery/lib/arm64/libxcrash_dumper.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4-legacy.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-legacy.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@1.0-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.2-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.3-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.4-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-external-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.5-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-external-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.5-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.6-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.6-external-impl.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/libanc_dc_plugin_xiaomi_v2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_dc_plugin_xiaomi_v2.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/libmiStereoFactoryRemapBasicLib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiStereoFactoryRemapBasicLib.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/libmiStereoFactoryRemapLib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiStereoFactoryRemapLib.so \
@@ -112,6 +142,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     MiuiCamera \
     MiuiExtraPhoto \
+    MiuiGallery \
     MiuiScanner
 
 PRODUCT_SYSTEM_PROPERTIES += \
