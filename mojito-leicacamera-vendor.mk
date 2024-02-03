@@ -51,6 +51,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiCamera/lib/arm64/libmiuiblursdk.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiCamera/lib/arm64/libmiuiblursdk.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiCamera/lib/arm64/libmulti-wakeup-engine.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiCamera/lib/arm64/libmulti-wakeup-engine.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiCamera/lib/arm64/librender_engine.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiCamera/lib/arm64/librender_engine.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiCamera/lib/arm64/libshadermanager.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiCamera/lib/arm64/libshadermanager.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiCamera/lib/arm64/libsnpe_dsp_domains_v2.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiCamera/lib/arm64/libsnpe_dsp_domains_v2.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiCamera/lib/arm64/libsnpe_dsp_skel.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiCamera/lib/arm64/libsnpe_dsp_skel.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiCamera/lib/arm64/libsnpe_dsp_v65_domains_v2_skel.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiCamera/lib/arm64/libsnpe_dsp_v65_domains_v2_skel.so \
@@ -79,6 +80,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_ai_vision.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_ai_vision.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_autocrop.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_autocrop.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_portrait.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_portrait.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_utils.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_utils.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_utils_extraphoto.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libmialgo_utils_extraphoto.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libmibokeh_gallery.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libmibokeh_gallery.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libmibrain_relighting_jni.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libmibrain_relighting_jni.so \
@@ -131,7 +133,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.camera.multicam.hwsync=TRUE \
     persist.vendor.camera.privapp.list=com.android.camera \
     persist.vendor.camera.picturesize.limit.enable=false \
-    persist.sys.miui.sdk.dbg \
     ro.boot.camera.config=_pro \
     ro.com.google.lens.oem_camera_package=com.android.camera
 
