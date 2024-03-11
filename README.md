@@ -25,7 +25,11 @@ and/or if you want to include Miui Scanner, set environment variable below
 ```sh
 export TARGET_USE_MIUI_SCANNER=true
 ```
-6. Start building and enjoy!
+6. There's [recovery flashable](https://xdaforums.com/t/mods-fixes-for-custom-roms-mojito-sunny.4494371/post-89361948) version of Leica Camera. So, if you want to use it instead of building Leica Camera inlined with your ROM, set environment variable below
+```sh
+export TARGET_USE_LEICA_CAMERA=false
+```
+7. Start building and enjoy!
 
 ### Source
 

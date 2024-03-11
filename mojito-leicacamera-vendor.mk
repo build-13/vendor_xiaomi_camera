@@ -6,6 +6,32 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/mojito-leicacamera
 
 PRODUCT_COPY_FILES += \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4-legacy.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-legacy.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@1.0-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.2-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.3-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.4-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-external-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.5-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-external-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.5-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-impl.so \
+    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.6-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.6-external-impl.so
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.camera.enableAdvanceFeatures=0x3E7 \
+    persist.vendor.camera.multicam=TRUE \
+    persist.vendor.camera.multicam.fpsmatch=TRUE \
+    persist.vendor.camera.multicam.framesync=1 \
+    persist.vendor.camera.multicam.hwsync=TRUE \
+    persist.vendor.camera.privapp.list=com.android.camera \
+    persist.vendor.camera.picturesize.limit.enable=false \
+    ro.boot.camera.config=_pro \
+    ro.com.google.lens.oem_camera_package=com.android.camera \
+    vendor.camera.aux.packagelist=com.android.camera
+
+TARGET_USE_LEICA_CAMERA ?= true
+ifeq ($(TARGET_USE_LEICA_CAMERA),true)
+PRODUCT_COPY_FILES += \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/etc/default-permissions/miuicamera-permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/miuicamera-permissions.xml \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/etc/device_features/mojito.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/device_features/mojito.xml \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/etc/device_features/sunny.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/device_features/sunny.xml \
@@ -103,16 +129,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash_dumper.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash_dumper.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libyuv.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/MiuiExtraPhoto/lib/arm64/libyuv.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4-legacy.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-legacy.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@1.0-impl.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.2-impl.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.3-impl.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.4-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-external-impl.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-impl.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.5-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-external-impl.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.5-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-impl.so \
-    vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/camera.device@3.6-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.6-external-impl.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/libanc_dc_plugin_xiaomi_v2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_dc_plugin_xiaomi_v2.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/libmiStereoFactoryRemapBasicLib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiStereoFactoryRemapBasicLib.so \
     vendor/xiaomi/mojito-leicacamera/proprietary/vendor/lib64/libmiStereoFactoryRemapLib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiStereoFactoryRemapLib.so \
@@ -124,17 +140,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     MiuiCamera \
     MiuiExtraPhoto
-
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.vendor.camera.enableAdvanceFeatures=0x3E7 \
-    persist.vendor.camera.multicam=TRUE \
-    persist.vendor.camera.multicam.fpsmatch=TRUE \
-    persist.vendor.camera.multicam.framesync=1 \
-    persist.vendor.camera.multicam.hwsync=TRUE \
-    persist.vendor.camera.privapp.list=com.android.camera \
-    persist.vendor.camera.picturesize.limit.enable=false \
-    ro.boot.camera.config=_pro \
-    ro.com.google.lens.oem_camera_package=com.android.camera
+endif
 
 TARGET_USE_MIUI_GALLERY ?= false
 ifeq ($(TARGET_USE_MIUI_GALLERY),true)
