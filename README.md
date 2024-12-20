@@ -14,7 +14,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/mojito-leicacamera/mojito-leicac
 ```
 3. Clone this repository to vendor/xiaomi/mojito-leicacamera, preferably with `--depth=1` to avoid having a big size locally clone
 ```sh
-git clone --depth=1 https://gitlab.com/pnplusplus/android_vendor_xiaomi_mojito-leicacamera vendor/xiaomi/mojito-leicacamera
+git clone --depth=1 https://github.com/build-13/vendor_xiaomi_camera vendor/xiaomi/mojito-leicacamera
 ```
 4. Apply necessary *.patch in patch folder to respective ROM sources folder (Search in Google if you don't know how to apply a *.patch)
 5. If you want to include Miui Gallery on your build, set environment variable below
